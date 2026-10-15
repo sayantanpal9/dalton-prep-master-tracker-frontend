@@ -28,9 +28,10 @@ the API's `/` health route.
 
 Production builds read `VITE_API_URL` from `.env.production`. Copy
 `.env.production.example` to `.env.production` and set the backend origin there
-before building. For deployments built from the repository, configure
-`VITE_API_URL` in the hosting provider's build environment; `.env.production`
-is intentionally ignored by Git.
+before building a deployment that calls the API directly. For Vercel, leave
+`VITE_API_URL` unset so requests use the same-origin rewrites in `vercel.json`;
+if you previously set `VITE_API_URL` in the Vercel project settings, remove it
+and redeploy. `.env.production` is intentionally ignored by Git.
 
 The default example uses `https://dalton-prep-backend.onrender.com`. The
 backend must allow the deployed frontend's origin through CORS.
@@ -80,5 +81,6 @@ development CORS configuration is needed.
   conflict checks.
 
 The API remains the source of truth for authorization and persisted business
-rules. Vite's proxy applies only in development; production builds call the
-origin configured by `VITE_API_URL` directly.
+rules. Vite's proxy applies only in local development. Vercel forwards
+same-origin `/api/*` and `/backend-health` requests through `vercel.json`;
+other production hosts can use `VITE_API_URL` to call the API directly.
