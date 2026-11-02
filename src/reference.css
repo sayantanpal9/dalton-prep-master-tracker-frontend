@@ -2727,6 +2727,26 @@ html[data-theme="dark"] .sidebar-group-label {
   border-color: #3b3d40;
 }
 
+html[data-theme="dark"] .nav-count {
+  border-color: #505255;
+  background: #3a3c3f;
+  color: #f0d46b;
+}
+
+html[data-theme="dark"] .work-status-button {
+  border-color: #456744;
+  background: #263426;
+  color: #c6e7bb;
+}
+
+html[data-theme="dark"] .notification-control {
+  color: #d3d4d1;
+}
+
+html[data-theme="dark"] .notification-control:hover {
+  background: #333539;
+}
+
 html[data-theme="dark"] .workspace-switch,
 html[data-theme="dark"] .command-search,
 html[data-theme="dark"] .today-button,
@@ -2786,6 +2806,12 @@ html[data-theme="dark"] .theme-toggle {
 html[data-theme="dark"] .theme-toggle:hover {
   border-color: #b08d27;
   background: #433b24;
+}
+
+html[data-theme="dark"] .help-card button {
+  border-color: #484a4d;
+  background: #3a3c3f;
+  color: #e6e6e3;
 }
 
 html[data-theme="dark"] .reference-card:not(.focus-card):not(.leave-guidelines),
@@ -2964,6 +2990,26 @@ html[data-theme="dark"] .notice-success {
 
 html[data-theme="dark"] .auth-page {
   background: #202225;
+}
+
+html[data-theme="dark"] .auth-card,
+html[data-theme="dark"] .team-drawer {
+  border-color: #3b3d40;
+  background: #292b2e;
+  color: #e6e6e3;
+}
+
+html[data-theme="dark"] .team-drawer .drawer-label,
+html[data-theme="dark"] .team-drawer .drawer-row > span {
+  color: #a5a6a4;
+}
+
+html[data-theme="dark"] .team-drawer .drawer-row {
+  border-color: #404245;
+}
+
+html[data-theme="dark"] .team-drawer .drawer-row strong {
+  color: #ececea;
 }
 
 html[data-theme="dark"] .auth-card > h1,
