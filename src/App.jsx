@@ -219,6 +219,7 @@ function App() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
     window.localStorage.setItem("mastertrack-theme", theme);
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme === "dark" ? "#181a1c" : "#f5f4ef");
   }, [theme]);
 
   const isManager = user?.role === "founder" || user?.role === "manager";

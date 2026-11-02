@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f6f7f3" />
+    <meta name="theme-color" content="#f5f4ef" />
     <meta name="description" content="A thoughtful workspace for people, availability, attendance, leave and team projects." />
     <title>Master Tracker — Dalton Prep</title>
+    <script>
+      const savedTheme = localStorage.getItem("mastertrack-theme");
+      if (savedTheme === "dark") {
+        document.documentElement.dataset.theme = "dark";
+        document.querySelector('meta[name="theme-color"]').content = "#181a1c";
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
